@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-prime (int m,int n)
+prime (int *m,int *n)
 {
     int i;
-    for(i=m;i<=n;i++)
+    for(i=*m;i<=*n;i++)
     {
            int x,flag=0;
            for(x=2;x<=i/2;x++)
            {
-                if(m%x==0)
+                if(*m%x==0)
                 {
                     flag = 1;
                     break;
@@ -17,7 +17,7 @@ prime (int m,int n)
 
         if (flag == 0)
             {
-                printf("%d",m);
+                printf("%d",*m);
             }
     }
 }
@@ -28,6 +28,6 @@ int main()
     scanf("%d",&fno);
     printf("Enter last to check between = ");
     scanf("%d",&lno);
-    prime(fno,lno);
+    prime(&fno,&lno);
     return 0;
 }

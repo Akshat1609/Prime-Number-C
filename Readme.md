@@ -1,1 +1,1 @@
-# Write Description for Code
+## This program is to find the prime numbers in a range entered by user
