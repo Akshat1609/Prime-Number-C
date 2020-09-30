@@ -2,7 +2,7 @@
 #include <stdlib.h>
 prime (int *m,int *n)
 {
-    int i;
+    int i,count=0;
     for(i=*m;i<=*n;i++)
     {
            int x,flag=0;
@@ -17,7 +17,8 @@ prime (int *m,int *n)
 
         if (flag == 0)
             {
-                printf("%d",*m);
+                count++;
+                printf(" %d prime number %d",count,*m);
             }
     }
 }
